@@ -19,6 +19,7 @@ static int dev_one_major;
 static void __exit devOneExit(void)
 {
     unregister_chrdev(dev_one_major, "dev_one");
+    printk(KERN_INFO "dev_one: unregistered successfully\n");
 }
 
 static int devOneOpen(struct inode *inodep, struct file *filep)
